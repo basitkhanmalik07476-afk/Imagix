@@ -1,0 +1,6 @@
+{
+  "name": "Imagix",
+  "description": "Optimize your images without compromising quality. Compress, convert, resize, crop, and inspect images locally in your browser with Imagix.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

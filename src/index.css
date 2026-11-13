@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-brand-50: #ebf5f0;
+  --color-brand-100: #d5ebe0;
+  --color-brand-500: #13966e;
+  --color-brand-600: #0e7c5b;
+  --color-brand-700: #095e44;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --surface-canvas: #fbf9f5;
+    --surface-card: #ffffff;
+    --surface-subtle: #f4f1ea;
+    --border-hairline: #e6e1d6;
+    --ink-primary: #181a18;
+    --ink-secondary: #555955;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--surface-canvas);
+    color: var(--ink-primary);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.checkerboard-bg {
+  background-color: #f7f4ec;
+  background-image:
+    linear-gradient(45deg, #e7e2d6 25%, transparent 25%),
+    linear-gradient(-45deg, #e7e2d6 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e7e2d6 75%),
+    linear-gradient(-45deg, transparent 75%, #e7e2d6 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
